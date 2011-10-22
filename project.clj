@@ -2,4 +2,5 @@
   :description "HTTP sessions into redis for Clojure/Ring"
   :dependencies [[org.clojure/clojure "1.2.1"]
                  [ring/ring-core "0.3.11"]
-                 [org.clojars.btw0/clj-redis "0.0.12"]])
+                 [org.clojars.btw0/clj-redis "0.0.12"]]
+  :dev-dependencies [[lein-clojars "0.6.0"]])
