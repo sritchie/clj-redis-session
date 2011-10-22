@@ -1,6 +1,16 @@
+What is clj-redis-session
+=========================
+
 clj-redis-session uses redis as a Clojure/Ring's HTTP session storage
 engine. What makes it different is its support for hierarchical data,
 actually any *print-str*able clojure data.
+
+Why clj-redis-session
+=====================
+
+The reason I wrote clj-redis-session is that the only redis backed
+sesssion store I could find, https://github.com/paraseba/rrss, doesn't
+support hierarchical data structure, e.g. lists, maps.
 
 Installation
 ============
@@ -26,13 +36,6 @@ clj-redis-session is a drop-in replacement for Ring native stores:
       ... other middlewares ...
       (wrap-session {:store (redis-store store)})
       ....))
-
-Why clj-redis-session
-=====================
-
-The reason I wrote clj-redis-session is the only redis backed sesssion
-store I could find, https://github.com/paraseba/rrss, doesn't support
-hierarchical data structure, e.g. lists, maps.
 
 License
 =======
