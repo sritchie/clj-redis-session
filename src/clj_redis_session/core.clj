@@ -15,7 +15,7 @@
           data-str (binding [*print-dup* true]
                      (print-str data))]
       (if expiration
-        (r/setex db session-key data-str expiration)
+        (r/setex db session-key expiration data-str)
         (r/set db session-key data-str))
       session-key))
   (delete-session [_ session-key]
